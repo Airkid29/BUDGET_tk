@@ -1,0 +1,59 @@
+{
+    "revenus": [
+        {
+            "montant": 100.0,
+            "source": "Dons",
+            "date": "2025-05-02"
+        },
+        {
+            "montant": 50.0,
+            "source": "Taf",
+            "date": "2025-05-02"
+        },
+        {
+            "montant": 1000.0,
+            "source": "Loterie",
+            "date": "2025-05-02"
+        }
+    ],
+    "depenses": [
+        {
+            "montant": 20.0,
+            "categorie": "Loisirs",
+            "date": "2025-05-02",
+            "description": "Play"
+        },
+        {
+            "montant": 10.0,
+            "categorie": "Transport",
+            "date": "2025-05-02",
+            "description": ""
+        },
+        {
+            "montant": 3.0,
+            "categorie": "Autres",
+            "date": "2025-05-02",
+            "description": ""
+        },
+        {
+            "montant": 15.0,
+            "categorie": "Logement",
+            "date": "2025-05-02",
+            "description": ""
+        },
+        {
+            "montant": 100.0,
+            "categorie": "Sant\u00e9",
+            "date": "2025-05-02",
+            "description": "Grippe aviaire"
+        }
+    ],
+    "budget_previsionnel": {
+        "Alimentation": 90.0,
+        "Logement": 100.0,
+        "Transport": 120.0,
+        "Loisirs": 10.0,
+        "Sant\u00e9": 100.0,
+        "Autres": 2.0
+    }
+}
