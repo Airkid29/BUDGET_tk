@@ -19,6 +19,11 @@
             "montant": 1000.0,
             "source": "Vente de voiture",
             "date": "2025-04-28"
+        },
+        {
+            "montant": 2000.0,
+            "source": "Taf",
+            "date": "2025-05-13"
         }
     ],
     "depenses": [
@@ -51,14 +56,50 @@
             "categorie": "Sant\u00e9",
             "date": "2025-05-02",
             "description": "Grippe aviaire"
+        },
+        {
+            "montant": 300.0,
+            "categorie": "Alimentation",
+            "date": "2025-05-13",
+            "description": "Tchoin"
+        },
+        {
+            "montant": 800.0,
+            "categorie": "Alimentation",
+            "date": "2025-05-13",
+            "description": "ameublement"
+        },
+        {
+            "montant": 1000.0,
+            "categorie": "Logement",
+            "date": "2025-05-13",
+            "description": "ameublement"
+        },
+        {
+            "montant": 400.0,
+            "categorie": "Alimentation",
+            "date": "2025-05-13",
+            "description": ""
+        },
+        {
+            "montant": 499.0,
+            "categorie": "Transport",
+            "date": "2025-05-13",
+            "description": ""
+        },
+        {
+            "montant": 250.0,
+            "categorie": "Autres",
+            "date": "2025-05-13",
+            "description": ""
         }
     ],
     "budget_previsionnel": {
-        "Alimentation": 90.0,
-        "Logement": 100.0,
-        "Transport": 120.0,
-        "Loisirs": 10.0,
-        "Sant\u00e9": 100.0,
-        "Autres": 2.0
+        "Alimentation": 200.0,
+        "Logement": 200.0,
+        "Transport": 200.0,
+        "Loisirs": 100.0,
+        "Sant\u00e9": 200.0,
+        "Autres": 200.0
     }
 }

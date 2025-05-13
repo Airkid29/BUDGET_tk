@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as tk 
 from tkinter import ttk
 from ui.add_income_window import AddIncomeWindow
 from ui.add_expense_window import AddExpenseWindow
@@ -23,6 +23,9 @@ class MainWindow:
 
         self.create_widgets()
         self.update_display()  # Utilise la méthode unifiée pour la mise à jour
+
+        # Gestion de la fermeture de la fenêtre
+        self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
 
     def create_widgets(self):
         # Cadre principal
@@ -62,7 +65,7 @@ class MainWindow:
         self.depassements_label.grid(row=2, column=0, sticky=tk.W)
         self.depassements_text = tk.Text(budget_group, height=3, width=30, font=('Segoe UI', 10))
         self.depassements_text.grid(row=2, column=1, sticky=tk.E)
-        self.depassements_text.config(state=tk.DISABLED)  # Empêche l'utilisateur de modifier le texte
+        self.depassements_text.config(state=tk.DISABLED)
 
         # Zone d'affichage des transactions
         transactions_group = ttk.LabelFrame(main_frame, text="Dernières Transactions", padding=10)
@@ -82,11 +85,9 @@ class MainWindow:
         self.graphics_notebook = ttk.Notebook(main_frame)
         self.graphics_notebook.grid(row=5, column=0, columnspan=2, pady=20, sticky=(tk.W, tk.E, tk.N, tk.S))
 
-        # Onglet pour le graphique des dépenses
         self.depenses_frame = ttk.Frame(self.graphics_notebook)
         self.graphics_notebook.add(self.depenses_frame, text="Dépenses par Catégorie")
 
-        # Onglet pour le graphique des revenus/dépenses
         self.revenus_depenses_frame = ttk.Frame(self.graphics_notebook)
         self.graphics_notebook.add(self.revenus_depenses_frame, text="Revenus/Dépenses")
 
@@ -129,15 +130,15 @@ class MainWindow:
             self.prevision_amount.config(text="Non défini")
 
         depassements = self.budget_manager.calculer_depassements_budget()
-        self.depassements_text.config(state=tk.NORMAL)  # Permet de modifier le texte
+        self.depassements_text.config(state=tk.NORMAL)
         if depassements:
             depassements_str = "\n".join(f"{categorie}: {depassement:.2f} €" for categorie, depassement in depassements.items())
-            self.depassements_text.delete(1.0, tk.END)  # Efface le texte précédent
+            self.depassements_text.delete(1.0, tk.END)
             self.depassements_text.insert(tk.END, depassements_str)
         else:
             self.depassements_text.delete(1.0, tk.END)
             self.depassements_text.insert(tk.END, "Aucun dépassement")
-        self.depassements_text.config(state=tk.DISABLED)  # Empêche la modification
+        self.depassements_text.config(state=tk.DISABLED)
 
     def update_transactions_display(self):
         self.revenues_list.delete(0, tk.END)
